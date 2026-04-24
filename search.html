@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - iStudio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-store"></i> iStudio
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <form class="navbar-search d-flex ms-3" role="search" id="navSearchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search" id="navSearchInput">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Header -->
+    <div class="search-header">
+        <div class="container">
+            <h1 class="search-query">Search Results</h1>
+            <p class="search-results-info" id="searchInfo">Searching for: <strong id="searchQuery">loading...</strong></p>
+            
+            <!-- New Search -->
+            <form id="searchFormHeader" class="mt-3" style="max-width: 500px; margin-left: auto; margin-right: auto;">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchInputHeader" placeholder="Search for products...">
+                    <button class="btn btn-primary" type="submit">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="container section">
+        <!-- Results Grid -->
+        <div id="searchResults" class="row">
+            <!-- Results will be loaded here -->
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" style="display: none;">
+            <div class="search-results-empty">
+                <i class="fas fa-search"></i>
+                <h3 style="margin-top: 1rem; color: #333;">No results found</h3>
+                <p>We couldn't find any products matching your search. Please try:</p>
+                <ul style="text-align: left; display: inline-block; color: #666;">
+                    <li>Checking your spelling</li>
+                    <li>Using fewer or different keywords</li>
+                    <li>Removing filters</li>
+                </ul>
+                <div style="margin-top: 2rem;">
+                    <a href="products.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Browse All Products
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Info -->
+        <div id="resultsInfo" style="display: none;" class="mb-4">
+            <p style="color: #666;">
+                <strong id="resultsCount">0</strong> products found matching your search
+            </p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <select class="form-select" id="sortBySearch" style="max-width: 200px;">
+                    <option value="">Sort By</option>
+                    <option value="name-asc">A - Z</option>
+                    <option value="name-desc">Z - A</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Searches -->
+    <section class="section bg-white">
+        <div class="container">
+            <h3 style="margin-bottom: 1.5rem;">Popular Searches</h3>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                <a href="#" onclick="newSearch('laptop')" class="btn btn-outline-primary">
+                    <i class="fas fa-laptop"></i> Laptops
+                </a>
+                <a href="#" onclick="newSearch('headphones')" class="btn btn-outline-primary">
+                    <i class="fas fa-headphones"></i> Headphones
+                </a>
+                <a href="#" onclick="newSearch('mouse')" class="btn btn-outline-primary">
+                    <i class="fas fa-mouse"></i> Mouse
+                </a>
+                <a href="#" onclick="newSearch('keyboard')" class="btn btn-outline-primary">
+                    <i class="fas fa-keyboard"></i> Keyboards
+                </a>
+                <a href="#" onclick="newSearch('monitor')" class="btn btn-outline-primary">
+                    <i class="fas fa-desktop"></i> Monitors
+                </a>
+                <a href="#" onclick="newSearch('cable')" class="btn btn-outline-primary">
+                    <i class="fas fa-cable"></i> Cables
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About iStudio</h5>
+                    <p>Your premier destination for quality tech products and gadgets. Committed to providing excellent customer service and authentic products.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> +1 (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> support@istudio.com<br>
+                        <i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 iStudio. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Search Page JS -->
+    <script>
+        let allProducts = [];
+        let searchResults = [];
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                // Load products
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+                allProducts = data.products;
+                
+                // Get search query
+                const urlParams = new URLSearchParams(window.location.search);
+                let query = urlParams.get('q') || sessionStorage.getItem('searchQuery') || '';
+                
+                if (!query) {
+                    // Try to get from navbar search input if submitted
+                    query = document.getElementById('navSearchInput').value;
+                }
+                
+                if (query) {
+                    performSearch(query);
+                }
+                
+                // Setup search form listeners
+                document.getElementById('navSearchForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const q = document.getElementById('navSearchInput').value;
+                    if (q) {
+                        performSearch(q);
+                    }
+                });
+                
+                document.getElementById('searchFormHeader').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const q = document.getElementById('searchInputHeader').value;
+                    if (q) {
+                        performSearch(q);
+                    }
+                });
+                
+                document.getElementById('sortBySearch').addEventListener('change', () => {
+                    displayResults();
+                });
+                
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        });
+
+        function performSearch(query) {
+            sessionStorage.removeItem('searchQuery');
+            
+            // Update search query display
+            document.getElementById('searchQuery').textContent = query;
+            document.getElementById('navSearchInput').value = query;
+            document.getElementById('searchInputHeader').value = query;
+            
+            // Search products
+            searchResults = allProducts.filter(product => {
+                const search = query.toLowerCase();
+                return product.name.toLowerCase().includes(search) ||
+                       product.category.toLowerCase().includes(search) ||
+                       product.description.toLowerCase().includes(search);
+            });
+            
+            displayResults();
+        }
+
+        function displayResults() {
+            const resultsContainer = document.getElementById('searchResults');
+            const noResultsDiv = document.getElementById('noResults');
+            const resultsInfo = document.getElementById('resultsInfo');
+            
+            // Sort if needed
+            const sortBy = document.getElementById('sortBySearch').value;
+            let displayResults = searchResults;
+            
+            if (sortBy) {
+                displayResults = sortProducts([...searchResults], sortBy);
+            }
+            
+            if (displayResults.length === 0) {
+                resultsContainer.innerHTML = '';
+                noResultsDiv.style.display = 'block';
+                resultsInfo.style.display = 'none';
+                return;
+            }
+            
+            noResultsDiv.style.display = 'none';
+            resultsInfo.style.display = 'block';
+            
+            document.getElementById('resultsCount').textContent = displayResults.length;
+            
+            resultsContainer.innerHTML = '';
+            
+            displayResults.forEach(product => {
+                const productCard = `
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="product-card">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <div class="product-body">
+                                <h5 class="product-name">${product.name}</h5>
+                                <p class="product-category">${product.category}</p>
+                                <div class="product-rating">
+                                    ${generateStarRating(product.rating)}
+                                    <span class="ms-2" style="font-size: 0.9rem; color: #999;">(${product.rating})</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="product-price-current">${formatPrice(product.price)}</span>
+                                    <span class="product-price-original">${formatPrice(product.originalPrice)}</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="btn-add-cart" onclick="addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-shopping-cart"></i> Add
+                                    </button>
+                                    <button class="btn-wishlist" onclick="addToWishlist(${product.id})">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                resultsContainer.innerHTML += productCard;
+            });
+        }
+
+        function newSearch(query) {
+            performSearch(query);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

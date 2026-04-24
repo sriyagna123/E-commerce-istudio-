@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iStudio - Your Premium Tech Store</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-store"></i> iStudio
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <form class="navbar-search d-flex ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+        
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <div class="carousel-caption text-white">
+                        <h1>Welcome to iStudio</h1>
+                        <p>Discover Premium Tech Products at Unbeatable Prices</p>
+                        <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <div class="carousel-caption text-white">
+                        <h1>Exclusive Deals</h1>
+                        <p>Save up to 50% on Selected Items</p>
+                        <a href="products.html" class="btn btn-primary btn-lg">View Deals</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); height: 400px; display: flex; align-items: center; justify-content: center;">
+                    <div class="carousel-caption text-white">
+                        <h1>Fast Shipping</h1>
+                        <p>Free Delivery on Orders Over $50</p>
+                        <a href="products.html" class="btn btn-primary btn-lg">Start Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Our Features Section -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Our Features</h2>
+            <div class="section-title-underline"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 class="feature-title">Free Shipping</h3>
+                        <p class="feature-description">Free delivery on orders over $50. Fast and reliable shipping worldwide.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="feature-title">Secure Payment</h3>
+                        <p class="feature-description">100% secure transactions with encrypted payment processing.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">24/7 Support</h3>
+                        <p class="feature-description">Dedicated customer support available round the clock to help you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="section-title-underline"></div>
+            
+            <div class="row">
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="products.html?category=Electronics" class="category-card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div>
+                            <i class="fas fa-laptop"></i>
+                            <h4>Electronics</h4>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="products.html?category=Accessories" class="category-card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div>
+                            <i class="fas fa-headphones"></i>
+                            <h4>Accessories</h4>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 mb-4">
+                    <a href="products.html?category=Cables" class="category-card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div>
+                            <i class="fas fa-cable"></i>
+                            <h4>Cables</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Products -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Latest Products</h2>
+            <div class="section-title-underline"></div>
+            
+            <div id="latestProducts" class="row">
+                <!-- Products will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About iStudio</h5>
+                    <p>Your premier destination for quality tech products and gadgets. Committed to providing excellent customer service and authentic products.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> +1 (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> support@istudio.com<br>
+                        <i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 iStudio. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Index-specific JS -->
+    <script>
+        // Load latest products on home page
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+                const products = data.products.slice(0, 6); // Get first 6 products
+                
+                const container = document.getElementById('latestProducts');
+                
+                products.forEach(product => {
+                    const productCard = `
+                        <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="product-card">
+                                <img src="${product.image}" alt="${product.name}" class="product-image">
+                                <div class="product-body">
+                                    <h5 class="product-name">${product.name}</h5>
+                                    <p class="product-category">${product.category}</p>
+                                    <div class="product-rating">
+                                        ${generateStarRating(product.rating)}
+                                        <span class="ms-2" style="font-size: 0.9rem; color: #999;">(${product.rating})</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="product-price-current">${formatPrice(product.price)}</span>
+                                        <span class="product-price-original">${formatPrice(product.originalPrice)}</span>
+                                    </div>
+                                    <div class="product-buttons">
+                                        <button class="btn-add-cart" onclick="addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                            <i class="fas fa-shopping-cart"></i> Add
+                                        </button>
+                                        <button class="btn-wishlist" onclick="addToWishlist(${product.id})">
+                                            <i class="far fa-heart"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += productCard;
+                });
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        });
+    </script>
+</body>
+</html>

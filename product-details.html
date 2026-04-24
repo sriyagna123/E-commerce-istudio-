@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - iStudio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-store"></i> iStudio
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <form class="navbar-search d-flex ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-4 mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                <li class="breadcrumb-item active" id="breadcrumbName" aria-current="page">Product</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Product Details -->
+    <div class="container section">
+        <div id="productDetails" class="row">
+            <!-- Loading state -->
+            <div class="col-12 text-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p>Loading product details...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Products -->
+    <section class="section bg-white">
+        <div class="container">
+            <h2 class="section-title">Related Products</h2>
+            <div class="section-title-underline"></div>
+            
+            <div id="relatedProducts" class="row">
+                <!-- Related products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About iStudio</h5>
+                    <p>Your premier destination for quality tech products and gadgets. Committed to providing excellent customer service and authentic products.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> +1 (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> support@istudio.com<br>
+                        <i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 iStudio. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Product Details JS -->
+    <script>
+        let allProducts = [];
+        let currentProduct = null;
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+                allProducts = data.products;
+                
+                // Get product ID from URL
+                const urlParams = new URLSearchParams(window.location.search);
+                const productId = parseInt(urlParams.get('id'));
+                
+                if (!productId) {
+                    // No product ID provided, redirect to products page
+                    window.location.href = 'products.html';
+                    return;
+                }
+                
+                // Find the product
+                currentProduct = allProducts.find(p => p.id === productId);
+                
+                if (!currentProduct) {
+                    // Product not found
+                    document.getElementById('productDetails').innerHTML = `
+                        <div class="col-12 text-center py-5">
+                            <i class="fas fa-frown" style="font-size: 3rem; color: #ccc;"></i>
+                            <h3 class="mt-3">Product Not Found</h3>
+                            <p>The product you're looking for doesn't exist.</p>
+                            <a href="products.html" class="btn btn-primary">Back to Products</a>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                displayProductDetails();
+                loadRelatedProducts();
+                
+            } catch (error) {
+                console.error('Error loading product:', error);
+                document.getElementById('productDetails').innerHTML = `
+                    <div class="col-12 text-center py-5">
+                        <i class="fas fa-exclamation-circle" style="font-size: 3rem; color: #ccc;"></i>
+                        <h3 class="mt-3">Error Loading Product</h3>
+                        <p>There was an error loading the product details.</p>
+                        <a href="products.html" class="btn btn-primary">Back to Products</a>
+                    </div>
+                `;
+            }
+        });
+
+        function displayProductDetails() {
+            // Update breadcrumb
+            document.getElementById('breadcrumbName').textContent = currentProduct.name;
+            
+            const detailsHTML = `
+                <div class="col-md-6">
+                    <div class="product-gallery">
+                        <img src="${currentProduct.image}" alt="${currentProduct.name}" class="product-gallery-main" id="mainImage">
+                        <div class="product-gallery-thumbnails">
+                            <img src="${currentProduct.image}" alt="${currentProduct.name}" class="active" onclick="changeImage('${currentProduct.image}')">
+                            <img src="${currentProduct.image}" alt="View 2" onclick="changeImage('${currentProduct.image}')">
+                            <img src="${currentProduct.image}" alt="View 3" onclick="changeImage('${currentProduct.image}')">
+                            <img src="${currentProduct.image}" alt="View 4" onclick="changeImage('${currentProduct.image}')">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="product-details">
+                        <h1>${currentProduct.name}</h1>
+                        
+                        <div class="product-details-rating mb-3">
+                            ${generateStarRating(currentProduct.rating)}
+                            <span class="ms-2" style="font-size: 0.95rem; color: #999;">(${currentProduct.rating} - 238 Reviews)</span>
+                        </div>
+                        
+                        <div class="product-details-price">
+                            <span class="current">${formatPrice(currentProduct.price)}</span>
+                            <span class="original">${formatPrice(currentProduct.originalPrice)}</span>
+                        </div>
+                        
+                        <p class="product-description">${currentProduct.description}</p>
+                        
+                        <div class="product-details-form">
+                            <div class="form-group">
+                                <label for="quantity">Quantity:</label>
+                                <div class="quantity-selector">
+                                    <button class="qty-minus" type="button">-</button>
+                                    <input type="number" id="quantity" class="qty-input" value="1" min="1">
+                                    <button class="qty-plus" type="button">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-actions">
+                            <button class="btn-add-cart" onclick="handleAddToCart()">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn-wishlist" onclick="addToWishlist(${currentProduct.id})">
+                                <i class="far fa-heart"></i> Wishlist
+                            </button>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 2rem;">
+                            <h5 style="margin-bottom: 1rem;">Product Details</h5>
+                            <p style="margin-bottom: 0.5rem;"><strong>Category:</strong> ${currentProduct.category}</p>
+                            <p style="margin-bottom: 0.5rem;"><strong>Stock:</strong> <span style="color: var(--success-color);">In Stock</span></p>
+                            <p style="margin-bottom: 0;"><strong>SKU:</strong> IST-${String(currentProduct.id).padStart(4, '0')}</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+                            <h5 style="margin-bottom: 1rem;">Specifications</h5>
+                            <pre style="background: white; padding: 1rem; border-radius: 5px; margin: 0; font-size: 0.9rem; white-space: pre-wrap;">${currentProduct.details}</pre>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.getElementById('productDetails').innerHTML = detailsHTML;
+            
+            // Setup quantity selector
+            setupQuantitySelector('quantity');
+        }
+
+        function changeImage(imageUrl) {
+            document.getElementById('mainImage').src = imageUrl;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.product-gallery-thumbnails img').forEach(img => {
+                img.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        function handleAddToCart() {
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            
+            // Add multiple items
+            for (let i = 0; i < quantity; i++) {
+                addToCart(currentProduct);
+            }
+        }
+
+        function loadRelatedProducts() {
+            // Get related products from same category
+            const related = allProducts
+                .filter(p => p.category === currentProduct.category && p.id !== currentProduct.id)
+                .slice(0, 4);
+            
+            const container = document.getElementById('relatedProducts');
+            
+            if (related.length === 0) {
+                container.innerHTML = '<p class="col-12 text-center">No related products found.</p>';
+                return;
+            }
+            
+            related.forEach(product => {
+                const productCard = `
+                    <div class="col-md-6 col-lg-3 mb-4">
+                        <div class="product-card">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <div class="product-body">
+                                <h5 class="product-name">${product.name}</h5>
+                                <p class="product-category">${product.category}</p>
+                                <div class="product-rating">
+                                    ${generateStarRating(product.rating)}
+                                </div>
+                                <div class="product-price">
+                                    <span class="product-price-current">${formatPrice(product.price)}</span>
+                                    <span class="product-price-original">${formatPrice(product.originalPrice)}</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <a href="product-details.html?id=${product.id}" class="btn btn-sm" style="flex: 1; border: 1px solid #ddd; background: white; color: var(--primary-color); text-align: center; padding: 0.5rem; border-radius: 5px; text-decoration: none;">
+                                        <i class="fas fa-eye"></i> View
+                                    </a>
+                                    <button class="btn-wishlist" onclick="addToWishlist(${product.id})" style="flex: 1;">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += productCard;
+            });
+        }
+
+        // Quantity selector setup
+        function setupQuantitySelector(elementId) {
+            const container = document.getElementById(elementId).parentElement;
+            const minusBtn = container.querySelector('.qty-minus');
+            const plusBtn = container.querySelector('.qty-plus');
+            const input = document.getElementById(elementId);
+
+            minusBtn.addEventListener('click', () => {
+                input.stepDown();
+                if (parseInt(input.value) < 1) {
+                    input.value = 1;
+                }
+            });
+
+            plusBtn.addEventListener('click', () => {
+                input.stepUp();
+            });
+
+            input.addEventListener('change', () => {
+                let value = parseInt(input.value) || 1;
+                input.value = Math.max(1, value);
+            });
+        }
+    </script>
+</body>
+</html>

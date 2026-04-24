@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - iStudio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-store"></i> iStudio
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <form class="navbar-search d-flex ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-4 mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container section">
+        <h1 class="mb-4 text-center">Contact Us</h1>
+        <p class="text-center text-muted mb-5" style="font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Have questions? We'd love to hear from you. Get in touch with our team and we'll respond as soon as possible.
+        </p>
+
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Phone</h3>
+                            <p>
+                                <a href="tel:+15551234567">+1 (555) 123-4567</a><br>
+                                <small>Mon-Fri: 9:00 AM - 6:00 PM EST</small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:support@istudio.com">support@istudio.com</a><br>
+                                <a href="mailto:sales@istudio.com">sales@istudio.com</a><br>
+                                <small>Response time: 24 hours</small>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Office Address</h3>
+                            <p>
+                                123 Tech Street<br>
+                                Silicon Valley, CA 94025<br>
+                                United States
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h3>Business Hours</h3>
+                            <p>
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 4:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Follow Us -->
+                    <div class="contact-info" style="margin-top: 2rem;">
+                        <h4 style="margin-bottom: 1rem;">Follow Us</h4>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: #007bff; color: white; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: #1DA1F2; color: white; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: #E1306C; color: white; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: #0077B5; color: white; display: flex; align-items: center; justify-content: center;">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <form id="contactForm" class="contact-form">
+                    <h3 style="margin-bottom: 1.5rem; color: #333;">Send us a Message</h3>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="contactName">Full Name <span style="color: red;">*</span></label>
+                                <input type="text" class="form-control" id="contactName" name="name" required>
+                                <div class="error-message" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address <span style="color: red;">*</span></label>
+                                <input type="email" class="form-control" id="contactEmail" name="email" required>
+                                <div class="error-message" style="display: none;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactPhone">Phone Number</label>
+                        <input type="tel" class="form-control" id="contactPhone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactSubject">Subject <span style="color: red;">*</span></label>
+                        <select class="form-control" id="contactSubject" name="subject" required>
+                            <option value="">Select a subject...</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="support">Technical Support</option>
+                            <option value="order">Order Related</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="partnership">Partnership Opportunity</option>
+                        </select>
+                        <div class="error-message" style="display: none;"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message <span style="color: red;">*</span></label>
+                        <textarea class="form-control" id="contactMessage" name="message" rows="6" required></textarea>
+                        <small style="color: #999;">Minimum 10 characters required</small>
+                        <div class="error-message" style="display: none;"></div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="contactConsent" required>
+                        <label class="form-check-label" for="contactConsent">
+                            I agree that iStudio may contact me regarding my inquiry
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+
+                    <div id="formMessage" style="margin-top: 1rem;"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="mt-5 pt-5" style="border-top: 2px solid #e0e0e0;">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="accordion" id="faqAccordion1">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    What are your shipping times?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                <div class="accordion-body">
+                                    We typically process orders within 1-2 business days. Shipping time depends on your location (5-7 business days for standard delivery).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Do you offer free shipping?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                <div class="accordion-body">
+                                    Yes! We offer free shipping on all orders over $50. Orders under $50 have a flat $10 shipping fee.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What is your return policy?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion1">
+                                <div class="accordion-body">
+                                    We accept returns within 30 days of purchase. Items must be in original condition with all packaging and accessories.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="accordion" id="faqAccordion2">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    Is the website secure for payments?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    Absolutely. We use SSL encryption and PCI-DSS compliant payment processing to keep your information secure.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Do you offer bulk discounts?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    Yes! Contact our sales team at sales@istudio.com for corporate and bulk order inquiries.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                    Can I track my order?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
+                                <div class="accordion-body">
+                                    Yes! You'll receive a tracking number via email once your order ships. You can track it on our website anytime.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About iStudio</h5>
+                    <p>Your premier destination for quality tech products and gadgets. Committed to providing excellent customer service and authentic products.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> +1 (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> support@istudio.com<br>
+                        <i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 iStudio. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Contact Form JS -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('contactName').value.trim();
+            const email = document.getElementById('contactEmail').value.trim();
+            const phone = document.getElementById('contactPhone').value.trim();
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value.trim();
+            
+            // Validate
+            let isValid = true;
+            const formMessage = document.getElementById('formMessage');
+            
+            if (name.length < 2) {
+                showFieldError('contactName', 'Name must be at least 2 characters');
+                isValid = false;
+            }
+            
+            if (!validateEmail(email)) {
+                showFieldError('contactEmail', 'Please enter a valid email address');
+                isValid = false;
+            }
+            
+            if (!subject) {
+                showFieldError('contactSubject', 'Please select a subject');
+                isValid = false;
+            }
+            
+            if (message.length < 10) {
+                showFieldError('contactMessage', 'Message must be at least 10 characters');
+                isValid = false;
+            }
+            
+            if (!isValid) {
+                return;
+            }
+            
+            // Show success message
+            formMessage.innerHTML = `
+                <div class="alert alert-success">
+                    <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. 
+                    We'll get back to you within 24 hours.
+                </div>
+            `;
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.innerHTML = '';
+            }, 5000);
+        });
+        
+        function showFieldError(fieldId, message) {
+            const field = document.getElementById(fieldId);
+            const errorDiv = field.parentElement.querySelector('.error-message');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            field.classList.add('is-invalid');
+            
+            field.addEventListener('input', () => {
+                errorDiv.style.display = 'none';
+                field.classList.remove('is-invalid');
+            });
+        }
+    </script>
+</body>
+</html>

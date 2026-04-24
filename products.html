@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - iStudio</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-store"></i> iStudio
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Cart
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                
+                <form class="navbar-search d-flex ms-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search products..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-4 mb-4">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Products</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container section">
+        <div class="row">
+            <!-- Sidebar Filters -->
+            <div class="col-lg-3 col-md-4">
+                <div class="sidebar">
+                    <h4 class="sidebar-title">Filters</h4>
+                    
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <label class="sidebar-title" style="border: none; font-size: 1rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">Category</label>
+                        <div id="categoryFilter">
+                            <!-- Categories will be loaded here -->
+                        </div>
+                    </div>
+                    
+                    <!-- Price Range Filter -->
+                    <div class="filter-group">
+                        <label class="sidebar-title" style="border: none; font-size: 1rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem;">Price Range</label>
+                        <div class="price-range-inputs">
+                            <input type="number" id="minPrice" class="form-control form-control-sm" placeholder="Min" min="0">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" class="form-control form-control-sm" placeholder="Max">
+                        </div>
+                        <button class="btn btn-sm btn-primary mt-2 w-100" onclick="applyPriceFilter()">Apply</button>
+                    </div>
+                    
+                    <!-- Reset Filters -->
+                    <button class="btn btn-sm btn-secondary w-100 mt-3" onclick="resetFilters()">
+                        <i class="fas fa-redo"></i> Reset Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Area -->
+            <div class="col-lg-9 col-md-8">
+                <!-- Sorting Section -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h3>All Products</h3>
+                    <select class="form-select" id="sortBy" style="max-width: 200px;">
+                        <option value="">Sort By</option>
+                        <option value="name-asc">A - Z</option>
+                        <option value="name-desc">Z - A</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+
+                <!-- Products Grid -->
+                <div id="productsGrid" class="row">
+                    <!-- Products will be loaded here -->
+                </div>
+
+                <!-- No Products Message -->
+                <div id="noProducts" style="display: none;" class="text-center py-5">
+                    <i class="fas fa-inbox" style="font-size: 3rem; color: #ccc;"></i>
+                    <p class="mt-3" style="font-size: 1.1rem; color: #999;">No products found matching your criteria.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About iStudio</h5>
+                    <p>Your premier destination for quality tech products and gadgets. Committed to providing excellent customer service and authentic products.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Customer Service</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-3">
+                    <h5>Contact Info</h5>
+                    <p>
+                        <i class="fas fa-phone"></i> +1 (555) 123-4567<br>
+                        <i class="fas fa-envelope"></i> support@istudio.com<br>
+                        <i class="fas fa-map-marker-alt"></i> 123 Tech Street, Silicon Valley, CA 94025
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 iStudio. All rights reserved. | <a href="#" style="color: #bbb;">Privacy Policy</a> | <a href="#" style="color: #bbb;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Products Page JS -->
+    <script>
+        let allProducts = [];
+        let currentFilters = {
+            category: '',
+            minPrice: 0,
+            maxPrice: Infinity
+        };
+
+        // Load products on page load
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch('data/products.json');
+                const data = await response.json();
+                allProducts = data.products;
+                
+                // Get category from URL if present
+                const urlParams = new URLSearchParams(window.location.search);
+                const categoryParam = urlParams.get('category');
+                if (categoryParam) {
+                    currentFilters.category = categoryParam;
+                }
+                
+                loadCategories();
+                displayProducts();
+                
+                // Event listeners
+                document.getElementById('sortBy').addEventListener('change', displayProducts);
+            } catch (error) {
+                console.error('Error loading products:', error);
+            }
+        });
+
+        // Load categories
+        function loadCategories() {
+            const categories = getUniqueCategories(allProducts);
+            const categoryFilter = document.getElementById('categoryFilter');
+            categoryFilter.innerHTML = '';
+
+            const allLabel = document.createElement('label');
+            allLabel.className = 'form-check';
+            allLabel.innerHTML = `
+                <input class="form-check-input" type="radio" name="category" value="" ${currentFilters.category === '' ? 'checked' : ''}>
+                <span class="form-check-label">All Categories</span>
+            `;
+            allLabel.querySelector('input').addEventListener('change', () => {
+                currentFilters.category = '';
+                displayProducts();
+            });
+            categoryFilter.appendChild(allLabel);
+
+            categories.forEach(category => {
+                const label = document.createElement('label');
+                label.className = 'form-check';
+                label.innerHTML = `
+                    <input class="form-check-input" type="radio" name="category" value="${category}" ${currentFilters.category === category ? 'checked' : ''}>
+                    <span class="form-check-label">${category}</span>
+                `;
+                label.querySelector('input').addEventListener('change', (e) => {
+                    currentFilters.category = e.target.value;
+                    displayProducts();
+                });
+                categoryFilter.appendChild(label);
+            });
+        }
+
+        // Apply price filter
+        function applyPriceFilter() {
+            const minPrice = document.getElementById('minPrice').value;
+            const maxPrice = document.getElementById('maxPrice').value;
+            
+            currentFilters.minPrice = minPrice ? parseFloat(minPrice) : 0;
+            currentFilters.maxPrice = maxPrice ? parseFloat(maxPrice) : Infinity;
+            
+            displayProducts();
+        }
+
+        // Reset filters
+        function resetFilters() {
+            document.getElementById('minPrice').value = '';
+            document.getElementById('maxPrice').value = '';
+            const allCategory = document.querySelector('input[name="category"][value=""]');
+            if (allCategory) {
+                allCategory.checked = true;
+            }
+            currentFilters = {
+                category: '',
+                minPrice: 0,
+                maxPrice: Infinity
+            };
+            document.getElementById('sortBy').value = '';
+            displayProducts();
+        }
+
+        // Display products
+        function displayProducts() {
+            // Filter products
+            let filtered = filterProducts(allProducts, currentFilters);
+            
+            // Sort products
+            const sortBy = document.getElementById('sortBy').value;
+            if (sortBy) {
+                filtered = sortProducts(filtered, sortBy);
+            }
+            
+            const grid = document.getElementById('productsGrid');
+            const noProducts = document.getElementById('noProducts');
+            
+            if (filtered.length === 0) {
+                grid.innerHTML = '';
+                noProducts.style.display = 'block';
+                return;
+            }
+            
+            noProducts.style.display = 'none';
+            grid.innerHTML = '';
+            
+            filtered.forEach(product => {
+                const productCard = `
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="product-card">
+                            <img src="${product.image}" alt="${product.name}" class="product-image">
+                            <div class="product-body">
+                                <h5 class="product-name">${product.name}</h5>
+                                <p class="product-category">${product.category}</p>
+                                <div class="product-rating">
+                                    ${generateStarRating(product.rating)}
+                                    <span class="ms-2" style="font-size: 0.9rem; color: #999;">(${product.rating})</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="product-price-current">${formatPrice(product.price)}</span>
+                                    <span class="product-price-original">${formatPrice(product.originalPrice)}</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="btn-add-cart" onclick="addToCart(${JSON.stringify(product).replace(/"/g, '&quot;')})">
+                                        <i class="fas fa-shopping-cart"></i> Add
+                                    </button>
+                                    <button class="btn-wishlist" onclick="addToWishlist(${product.id})">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += productCard;
+            });
+        }
+    </script>
+</body>
+</html>

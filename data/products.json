@@ -1,0 +1,114 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 79.99,
+      "originalPrice": 129.99,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=800&h=800&fit=crop",
+      "description": "High-quality wireless headphones with active noise cancellation and premium comfort.",
+      "details": "Features:\n- Active noise cancellation\n- 30-hour battery life\n- Bluetooth 5.0\n- Comfortable ear cushions\n- Built-in mic"
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "category": "Electronics",
+      "price": 199.99,
+      "originalPrice": 279.99,
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=800&fit=crop",
+      "description": "A stylish smartwatch with fitness tracking, heart rate monitoring, and smart notifications.",
+      "details": "Features:\n- AMOLED display\n- Heart rate tracking\n- Sleep monitoring\n- Water resistant\n- Multi-day battery"
+    },
+    {
+      "id": 3,
+      "name": "Mechanical Keyboard",
+      "category": "Electronics",
+      "price": 89.99,
+      "originalPrice": 129.99,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=800&h=800&fit=crop",
+      "description": "Premium mechanical keyboard with RGB lighting and tactile switches.",
+      "details": "Features:\n- RGB backlighting\n- Mechanical switches\n- Durable aluminum frame\n- Customizable keys\n- N-key rollover"
+    },
+    {
+      "id": 4,
+      "name": "Webcam 1080P",
+      "category": "Electronics",
+      "price": 69.99,
+      "originalPrice": 99.99,
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?w=800&h=800&fit=crop",
+      "description": "Full HD webcam with auto-focus and clear audio for video calls.",
+      "details": "Features:\n- 1080P full HD\n- Auto-focus lens\n- Built-in microphone\n- Wide-angle view\n- USB plug and play"
+    },
+    {
+      "id": 5,
+      "name": "Green Dress",
+      "category": "Fashion",
+      "price": 49.99,
+      "originalPrice": 79.99,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&h=800&fit=crop",
+      "description": "Elegant green dress with a comfortable fit and detailed styling.",
+      "details": "Features:\n- Soft fabric\n- Stylish cut\n- Breathable design\n- Multiple sizes\n- Perfect for daytime wear"
+    },
+    {
+      "id": 6,
+      "name": "Denim Jacket",
+      "category": "Fashion",
+      "price": 69.99,
+      "originalPrice": 99.99,
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&h=800&fit=crop",
+      "description": "Classic denim jacket with a comfortable fit and premium stitching.",
+      "details": "Features:\n- Durable denim fabric\n- Stylish collar\n- Button closure\n- Two front pockets\n- Relaxed fit"
+    },
+    {
+      "id": 7,
+      "name": "USB-C Hub",
+      "category": "Accessories",
+      "price": 44.99,
+      "originalPrice": 69.99,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=800&h=800&fit=crop",
+      "description": "Compact USB-C hub with multiple ports for productivity on the go.",
+      "details": "Features:\n- HDMI output\n- USB 3.0 ports\n- SD card reader\n- Fast charging support\n- Sleek design"
+    },
+    {
+      "id": 8,
+      "name": "Wireless Mouse",
+      "category": "Accessories",
+      "price": 29.99,
+      "originalPrice": 49.99,
+      "rating": 4.4,
+      "image": "https://images.unsplash.com/photo-1527814050087-3793815479db?w=800&h=800&fit=crop",
+      "description": "Ergonomic wireless mouse with long battery life and precise tracking.",
+      "details": "Features:\n- Ergonomic shape\n- 2.4GHz wireless\n- Adjustable DPI\n- Long battery life\n- Quiet click"
+    },
+    {
+      "id": 9,
+      "name": "Desk Lamp",
+      "category": "Furniture",
+      "price": 39.99,
+      "originalPrice": 59.99,
+      "rating": 4.3,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=800&fit=crop",
+      "description": "LED desk lamp with adjustable brightness and a modern finish.",
+      "details": "Features:\n- Adjustable light levels\n- Touch controls\n- Energy efficient LED\n- Sturdy base\n- Sleek look"
+    },
+    {
+      "id": 10,
+      "name": "Ergonomic Chair",
+      "category": "Furniture",
+      "price": 129.99,
+      "originalPrice": 179.99,
+      "rating": 4.7,
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=800&fit=crop",
+      "description": "Comfortable ergonomic chair designed for long hours of work.",
+      "details": "Features:\n- Adjustable lumbar support\n- Breathable mesh back\n- Padded seat\n- Smooth rolling casters\n- Height adjustable"
+    }
+  ]
+}
